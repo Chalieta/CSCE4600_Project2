@@ -12,3 +12,6 @@ require (
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+require builtins v1.0.0
+replace builtins => ./builtins

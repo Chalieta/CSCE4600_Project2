@@ -8,8 +8,9 @@ import (
 	"os/exec"
 	"os/user"
 	"strings"
+	"builtins"
 
-	"github.com/jh125486/CSCE4600/Project2/builtins"
+	// "github.com/jh125486/CSCE4600/Project2/builtins"
 )
 
 func main() {
@@ -78,6 +79,8 @@ func handleInput(w io.Writer, input string, exit chan<- struct{}) error {
 		return builtins.ChangeDirectory(args...)
 	case "env":
 		return builtins.EnvironmentVariables(w, args...)
+	case "mkdir":
+		return builtins.MakeDirectory(args...)
 	case "exit":
 		exit <- struct{}{}
 		return nil
