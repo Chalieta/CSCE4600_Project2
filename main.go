@@ -9,8 +9,12 @@ import (
 	"os/user"
 	"strings"
 	"builtins"
+<<<<<<< Updated upstream
 
 	// "github.com/jh125486/CSCE4600/Project2/builtins"
+=======
+	//"github.com/jh125486/CSCE4600/Project2/builtins"
+>>>>>>> Stashed changes
 )
 
 func main() {
@@ -84,6 +88,8 @@ func handleInput(w io.Writer, input string, exit chan<- struct{}) error {
 	case "exit":
 		exit <- struct{}{}
 		return nil
+	case "ls":
+		return builtins.ListFilesDirectory(args...)
 	}
 
 	return executeCommand(name, args...)
