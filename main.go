@@ -9,12 +9,6 @@ import (
 	"os/user"
 	"strings"
 	"builtins"
-<<<<<<< Updated upstream
-
-	// "github.com/jh125486/CSCE4600/Project2/builtins"
-=======
-	//"github.com/jh125486/CSCE4600/Project2/builtins"
->>>>>>> Stashed changes
 )
 
 func main() {
