@@ -8,10 +8,6 @@ import (
 	"os"
 )
 
-// var (
-// 	ErrInvalidArgCount = errors.New("invalid argument count") // Already declared in cd
-// )
-
 func OpenFile(args ...string) error {
 	switch len(args) {
 	case 1:
