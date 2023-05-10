@@ -3,7 +3,6 @@
 package builtins
 
 import (
-	"log"
 	"fmt"
 	"os"
 )
@@ -11,19 +10,17 @@ import (
 func OpenFileDirectory(args ...string) error {
 	switch len(args) {
 	case 1:
-    err := os.Open("notes.txt", os.O_RDWR|os.O_CREATE, 0755)
+    f, err := os.OpenFile(args[0], os.O_RDONLY, 0)
     if err != nil {
-		log.Fatal(err)
-      return fmt.Errorf("open is unsuccessful")
+    	return fmt.Errorf("Open is unsuccessful")
 	}
     if err := f.Close(); err != nil {
-		log.Fatal(err)
+		return fmt.Errorf("Open is unsuccessful")
 	}
-    else {
-      println("open is successful")
-      return err
-    }
+	println("Open is successful")
+	return err
+
 	default:
-		return fmt.Errorf("%w: expected one argument (openfile name)", ErrInvalidArgCount)
+		return fmt.Errorf("%w: expected one argument (file name)", ErrInvalidArgCount)
 	}
 }

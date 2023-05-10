@@ -80,14 +80,16 @@ func handleInput(w io.Writer, input string, exit chan<- struct{}) error {
 	case "pwd":
 		return builtins.PrintWorkingDirectory(w, args...)
 	case "mkdir":
-		return builtins.MakeDirectory(args...)
-	case "exit":
-		exit <- struct{}{}
-		return nil
+		return builtins.MakeDirectory(args...)	
 	case "ls":
 		return builtins.ListFilesDirectory(args...)
 	case "open":
 		return builtins.OpenFileDirectory(args...)
+	case "touch":
+		return builtins.TouchFile(args...)
+	case "exit":
+		exit <- struct{}{}
+		return nil
 	}
 
 	return executeCommand(name, args...)
