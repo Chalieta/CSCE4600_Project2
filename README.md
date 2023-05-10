@@ -16,6 +16,7 @@ The commands that we added to the package builtins:
 - `open`
 - `pwd`
 - `touch`
+- `cat`
 
 ## Steps
 
