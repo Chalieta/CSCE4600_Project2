@@ -1,6 +1,6 @@
-//Sussie Manovapillai
-//Description: Implementing the ls command.
-//4-18-2023 CSCE4600
+//Leif Messinger
+//Description: Implementing the cat command.
+//5-10-2023 CSCE4600
 
 package builtins
 
