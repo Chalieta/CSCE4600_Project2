@@ -30,10 +30,10 @@ func TestEnvironmentVariables(t *testing.T) {
 		{
 			name: "success no args, root directory",
 			setEnv: map[string]string{
-				"PWD": "/"
+				"PWD": "/",
 			},
-			wantOut: fmt.Sprintln("/", "\n")
-		}
+			wantOut: fmt.Sprintln("/", "\n"),
+		},
 	}
 	for _, tt := range tests {
 		tt := tt
