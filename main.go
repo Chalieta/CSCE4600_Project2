@@ -83,6 +83,8 @@ func handleInput(w io.Writer, input string, exit chan<- struct{}) error {
 		return builtins.MakeDirectory(args...)	
 	case "ls":
 		return builtins.ListFilesDirectory(args...)
+	case "cat":
+		return builtins.ConcatenateFiles(args...)
 	case "open":
 		return builtins.OpenFileDirectory(args...)
 	case "touch":
