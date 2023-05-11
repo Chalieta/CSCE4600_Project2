@@ -17,6 +17,7 @@ The commands that we added to the package builtins:
 - `pwd`
 - `touch`
 - `cat`
+- `echo`
 
 ## Steps
 
