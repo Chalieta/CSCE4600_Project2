@@ -5,7 +5,7 @@
 package builtins
 
 import (
-	"bufio"	//scanner
+	"bufio" //scanner
 	"fmt"
 	"log"
 	"os"

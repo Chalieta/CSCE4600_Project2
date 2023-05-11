@@ -2,13 +2,13 @@ package main
 
 import (
 	"bufio"
+	"builtins"
 	"fmt"
 	"io"
 	"os"
 	"os/exec"
 	"os/user"
 	"strings"
-	"builtins"
 )
 
 func main() {
@@ -89,6 +89,8 @@ func handleInput(w io.Writer, input string, exit chan<- struct{}) error {
 		return builtins.OpenFileDirectory(args...)
 	case "touch":
 		return builtins.TouchFile(args...)
+	case "echo":
+		return builtins.Echo(args...)
 	case "exit":
 		exit <- struct{}{}
 		return nil
